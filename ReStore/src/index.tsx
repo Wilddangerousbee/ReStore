@@ -1,7 +1,9 @@
 import React from "react";
 import ReactDOM from "react-dom";
 
+import Spinner from './components/spinner/spinner'
+
 ReactDOM.render(
-  <h1>Hi</h1>,
+  <Spinner widht={10} hieght={12}/>,
   document.getElementById('root')
 )
