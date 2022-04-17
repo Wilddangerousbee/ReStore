@@ -1,7 +1,7 @@
 import { render, screen } from "@testing-library/react"
 import { BrowserRouter, MemoryRouter, Route, Routes } from "react-router-dom"
 import App from "./components/app/app"
-import PageNotFound from "./page-not-found/page-not-found"
+import PageNotFound from "./pages/page-not-found"
 
 import '@testing-library/jest-dom/extend-expect';
 
@@ -10,31 +10,35 @@ describe("test routing", () => {
     test('defualt', () => { 
         render(      
         <BrowserRouter>
-            <Routes>
-              <Route path="/" element={<App/>}/>
-              <Route path="*" element={<PageNotFound /> } />
-            </Routes>
-          </BrowserRouter>)
+            <App/>
+        </BrowserRouter>)
 
-        const elementPageNotFoun = screen.queryByTestId("page-not-found");
+        const elementPageNotFound = screen.queryByText(/404/i);
         
-        expect(elementPageNotFoun).toBeNull();
+        expect(elementPageNotFound).toBeNull();
+    })
+
+    test('carts page', () => { 
+        render(      
+        <MemoryRouter initialEntries={["/carts"]} >
+            <App/>
+        </MemoryRouter>)
+
+        const elementPageNotFound = screen.queryByText(/404/i);
+
+        expect(elementPageNotFound).toBeNull();
+
     })
 
     test('page not fund', () => { 
         render(      
         <MemoryRouter initialEntries={["/gfdsgfds"]} >
-            <Routes>
-              <Route path="/" element={<App/>}/>
-              <Route path="*" element={<PageNotFound /> } />
-            </Routes>
+            <App/>
         </MemoryRouter>)
 
-        const elementPageNotFoun = screen.getByText(/404/i);
+        const elementPageNotFound = screen.getByText(/404/i);
 
-        screen.debug();
-
-        expect(elementPageNotFoun).toBeInTheDocument();
+        expect(elementPageNotFound).toBeInTheDocument();
 
     })
 })

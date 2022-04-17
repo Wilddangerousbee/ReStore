@@ -8,16 +8,13 @@ import { BrowserRouter, Route, Router, Routes } from "react-router-dom";
 import { Provider } from "react-redux";
 
 import store from "./store";
-import PageNotFound from "./page-not-found/page-not-found";
+import PageNotFound from "./pages/page-not-found";
 
 ReactDOM.render(
   <Provider store={store}>
     <ErrorBoundary>
       <BrowserRouter>
-        <Routes>
-          <Route path="/" element={<App/>}/>
-          <Route path="*" element={<PageNotFound /> } />
-        </Routes>
+        <App/>
       </BrowserRouter>
     </ErrorBoundary>
   </Provider>,
