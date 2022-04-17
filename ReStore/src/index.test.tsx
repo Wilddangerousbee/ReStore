@@ -1,7 +1,6 @@
 import { render, screen } from "@testing-library/react"
-import { BrowserRouter, MemoryRouter, Route, Routes } from "react-router-dom"
+import { MemoryRouter } from "react-router-dom"
 import App from "./components/app/app"
-import PageNotFound from "./pages/page-not-found"
 
 import '@testing-library/jest-dom/extend-expect';
 
@@ -9,9 +8,9 @@ import '@testing-library/jest-dom/extend-expect';
 describe("test routing", () => {
     test('defualt', () => { 
         render(      
-        <BrowserRouter>
+        <MemoryRouter>
             <App/>
-        </BrowserRouter>)
+        </MemoryRouter>)
 
         const elementPageNotFound = screen.queryByText(/404/i);
         

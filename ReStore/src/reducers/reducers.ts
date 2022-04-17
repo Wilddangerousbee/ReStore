@@ -1,7 +1,9 @@
 import { BooksAction } from "../actions";
 
+import { Book } from "./../types/types"
+ 
 interface BooksState {
-    books: Array<string>
+    books: Array<Book>
 };
 
 const initialState : BooksState = {

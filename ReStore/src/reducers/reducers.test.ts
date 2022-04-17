@@ -7,12 +7,18 @@ describe("test BooksReducer", () => {
         const store = createStore(BooksReducer);
         const action : BooksAction = {
             type: "BOOKS_LOADED",
-            payload: ["Harry Potter", "Dovlatova"]
+            payload: [{
+              title: "Harry Potter",
+              author: "J. Rouling"  
+            }]
         }
 
         store.dispatch(action);
 
-        expect(store.getState().books).toEqual(["Harry Potter", "Dovlatova"]);
+        expect(store.getState().books).toEqual([{
+            title: "Harry Potter",
+            author: "J. Rouling"  
+          }]);
     })
 
     test('Initial store', () => {  
