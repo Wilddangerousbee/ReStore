@@ -9,9 +9,7 @@ interface BookListProps {
     books : Book[]
 }
 
-const BookList : FC<BookListProps> = (bookListProps : BookListProps) => {
-    const {books} = bookListProps;
-
+const BookList : FC<BookListProps> = ({books}) => {
     return (
         <Fragment>
             {books.map((book) => <BookListItem {...book} />)}

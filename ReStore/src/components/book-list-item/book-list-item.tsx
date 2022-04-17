@@ -2,8 +2,7 @@ import React, { FC, Fragment } from "react";
 
 import { Book } from "../../types/types";
 
-const BookListItem : FC<Book> = (book:Book) => {
-    const {title, author} = book;
+const BookListItem : FC<Book> = ({title, author}) => {
 
     return (
         <Fragment>
