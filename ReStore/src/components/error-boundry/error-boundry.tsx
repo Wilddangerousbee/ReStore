@@ -33,7 +33,7 @@ class ErrorBoundary extends React.Component<Props,State> {
 
     if (hasError) {
       return(
-        <h1>{errorInfo}</h1>
+        <h1 data-testid="error-message">{errorInfo}</h1>
       );
     }
 

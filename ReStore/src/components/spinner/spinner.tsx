@@ -23,7 +23,6 @@ const Spinner: FC<ISpinner>  = ({widht, hieght}) => {
             <div></div>
             <div></div>
         </div>
-        <h1>HI</h1>
         </ErrorBoundary>
     )
 }
