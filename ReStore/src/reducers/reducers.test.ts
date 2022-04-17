@@ -3,6 +3,7 @@ import { BooksAction } from "../actions";
 import { BooksReducer } from "./reducers";
 
 describe("test BooksReducer", () => {
+    
     test('BOOKS_LOADED', () => {  
         const store = createStore(BooksReducer);
         const action : BooksAction = {
@@ -12,7 +13,12 @@ describe("test BooksReducer", () => {
 
         store.dispatch(action);
 
-        expect(store.getState().books[0]).toBe("Harry Potter");
-        expect(store.getState().books[1]).toBe("Dovlatova");
+        expect(store.getState().books).toEqual(["Harry Potter", "Dovlatova"]);
+    })
+
+    test('Initial store', () => {  
+        const store = createStore(BooksReducer);
+
+        expect(store.getState().books).toEqual([]);
     })
 })
