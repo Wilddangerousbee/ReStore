@@ -2,9 +2,6 @@ import React, { FC, Fragment } from "react";
 
 import { Book } from "../../types/types";
 import BookListItem from "../book-list-item/book-list-item";
-
-import '@testing-library/jest-dom/extend-expect';
-
 interface BookListProps {
     books : Book[]
 }
