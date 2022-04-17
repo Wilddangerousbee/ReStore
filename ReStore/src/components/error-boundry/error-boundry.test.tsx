@@ -1,8 +1,7 @@
-import { fireEvent, render, screen } from "@testing-library/react";
+import { render, screen } from "@testing-library/react";
 import ErrorBoundary from "./error-boundry";
 
 import '@testing-library/jest-dom/extend-expect';
-import userEvent from "@testing-library/user-event";
 
 describe("Correct test", () => {
     test('Correct element', () => { 
@@ -14,8 +13,6 @@ describe("Correct test", () => {
 
         expect(screen.getByText(/It is normal test/i)).toBeInTheDocument();
         expect(errorMesageComponent).toBeNull();
-
-        screen.debug();
     })
 
 })
