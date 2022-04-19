@@ -30,9 +30,9 @@ describe("test book list", () => {
             </Provider>
         )
 
-        expect(screen.queryByText("Hideo")).toBeInTheDocument();
-        expect(screen.queryByText("Kodzima")).toBeInTheDocument();
-        expect(screen.queryByText("Kujo")).toBeInTheDocument();
-        expect(screen.queryByText("Jotore")).toBeInTheDocument();
+        expect(screen.queryByText(/hideo/i)).toBeInTheDocument();
+        expect(screen.queryByText(/kodzima/i)).toBeInTheDocument();
+        expect(screen.queryByText(/kujo/i)).toBeInTheDocument();
+        expect(screen.queryByText(/jotore/i)).toBeInTheDocument();
     })
 })
