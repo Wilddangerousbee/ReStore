@@ -3,8 +3,8 @@ import React, { FC } from "react";
 import { connect } from "react-redux";
 import { useSelectionType } from "../../hooks/useSelectionTyped";
 
-import { BookListProps } from "../../types/Book";
-import BookListItem from "../book-list-item/book-list-item";
+import { BookListProps } from "../../types";
+import BookListItem from "../book-list-item";
 
 const BookList : FC<BookListProps> = () => {
     const {books} = useSelectionType(state => state.books);

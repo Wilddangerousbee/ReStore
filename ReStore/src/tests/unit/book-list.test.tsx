@@ -1,11 +1,11 @@
 import { render, screen } from "@testing-library/react";
-import BookList from "../../components/book-list/book-list";
+import BookList from "../../components/book-list";
 
 import store from "../../store";
 
 import '@testing-library/jest-dom/extend-expect';
 import { Provider } from "react-redux";
-import { ActionBook, booksActionTypes } from "../../types/Book";
+import { ActionBook, booksActionTypes } from "../../types";
 
 describe("test book list", () => {
     test('one element in array', () => { 

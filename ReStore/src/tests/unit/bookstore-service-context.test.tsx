@@ -1,4 +1,4 @@
-import ServiceApi from "../../components/service/bookstore-service-context";
+import { ServiceApi } from "../../components/service";
 
 import axios from "axios";
 

@@ -1,6 +1,6 @@
 import { createStore } from "redux";
-import { ActionBook, booksActionTypes } from "../../types/Book";
-import { BooksReducer } from "../../reducers/reducers";
+import { ActionBook, booksActionTypes } from "../../types";
+import  BooksReducer from './../../store/reducers'
 
 describe("test BooksReducer", () => {
     test('BOOKS_LOADED', () => {  
@@ -24,6 +24,6 @@ describe("test BooksReducer", () => {
     test('Initial store', () => {  
         const store = createStore(BooksReducer);
 
-        expect(store.getState().books).toEqual([]);
+        expect(store.getState().books).toEqual({"books": [], "error": null, "loading": true});
     })
 })

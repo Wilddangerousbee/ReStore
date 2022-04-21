@@ -1,4 +1,4 @@
-import { ActionBook, booksActionTypes, BooksState } from '../types/Book'
+import { ActionBook, booksActionTypes, BooksState } from '../../types'
 
 const initialState : BooksState = {
     books: [], 

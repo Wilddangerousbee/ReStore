@@ -1,6 +1,6 @@
 
 import React from "react";
-import { ErrorBoundaryProps, ErrorBoundaryState } from "../../types/error-boundary";
+import { ErrorBoundaryProps, ErrorBoundaryState } from "../../types";
 
 class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundaryState> {
   

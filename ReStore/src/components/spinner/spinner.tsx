@@ -1,7 +1,7 @@
 import React, {FC} from "react";
-import { ISpinner } from "../../types/spinner";
+import { ISpinner } from "../../types";
 
-import ErrorBoundary from "../error-boundry/error-boundry";
+import ErrorBoundary from "../error-boundry";
 
 import "./spinner.css";
 

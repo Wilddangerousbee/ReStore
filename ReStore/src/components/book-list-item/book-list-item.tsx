@@ -1,5 +1,5 @@
 import React, { FC, Fragment } from "react";
-import { Book } from "../../types/Book";
+import { Book } from "../../types";
 
 
 const BookListItem : FC<Book> = ({title, author}) => {

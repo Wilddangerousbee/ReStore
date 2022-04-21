@@ -55,5 +55,5 @@ const booksError = (errorMessage: string) : BooksError => {
 
 type booksActionTypes = BooksLoaded | BooksLoading | BooksError 
 
-export { ActionBook }
-export type { booksActionTypes, BooksState, Book, BookListProps}
+export { ActionBook, booksError, booksLoading, booksLoaded }
+export type { booksActionTypes, BooksState, Book, BookListProps }

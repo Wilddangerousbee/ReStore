@@ -1,6 +1,6 @@
 import { render, screen } from "@testing-library/react"
 import { MemoryRouter } from "react-router-dom"
-import App from "../../components/app/app"
+import App from "../../components/app"
 
 import '@testing-library/jest-dom/extend-expect';
 
