@@ -9,6 +9,10 @@ interface Book {
     author: string
 }
 
+interface BookListProps {
+    books : Array<Book>
+}
+
 interface BooksState {
     books: Array<Book>, 
     loading: boolean,
@@ -52,4 +56,4 @@ const booksError = (errorMessage: string) : BooksError => {
 type booksActionTypes = BooksLoaded | BooksLoading | BooksError 
 
 export { ActionBook }
-export type { booksActionTypes, BooksState, Book}
+export type { booksActionTypes, BooksState, Book, BookListProps}

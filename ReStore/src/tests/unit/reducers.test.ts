@@ -1,6 +1,6 @@
 import { createStore } from "redux";
-import { ActionBook, booksActionTypes } from "../types/Book";
-import { BooksReducer } from "./reducers";
+import { ActionBook, booksActionTypes } from "../../types/Book";
+import { BooksReducer } from "../../reducers/reducers";
 
 describe("test BooksReducer", () => {
     test('BOOKS_LOADED', () => {  

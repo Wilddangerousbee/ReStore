@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import BookList from "./book-list";
+import BookList from "../../components/book-list/book-list";
 
 import store from "../../store";
 

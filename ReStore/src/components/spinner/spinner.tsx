@@ -1,13 +1,9 @@
 import React, {FC} from "react";
+import { ISpinner } from "../../types/spinner";
 
 import ErrorBoundary from "../error-boundry/error-boundry";
 
 import "./spinner.css";
-
-interface ISpinner {
-    widht: number,
-    hieght: number
-}
 
 const Spinner: FC<ISpinner>  = ({widht, hieght}) => {
     console.log(widht, hieght)

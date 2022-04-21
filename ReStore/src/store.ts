@@ -3,7 +3,7 @@ import { combineReducers, createStore } from "redux";
 import { BooksReducer } from "./reducers/reducers";
 
 const rootReducer = combineReducers({
-    book: BooksReducer
+    books: BooksReducer
 });
 
 const store = createStore(rootReducer);

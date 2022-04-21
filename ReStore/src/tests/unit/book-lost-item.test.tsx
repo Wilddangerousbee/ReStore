@@ -1,8 +1,8 @@
 import { render, screen } from "@testing-library/react";
-import BookListItem from "./book-list-item";
+import BookListItem from "../../components/book-list-item/book-list-item";
 
 import '@testing-library/jest-dom/extend-expect';
-import { Book } from "../../types/types";
+import { Book } from "../../types/Book";
 
 describe("test books list item", () => {
     test('add book', () => { 

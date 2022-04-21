@@ -1,5 +1,5 @@
 import { render, screen } from "@testing-library/react";
-import ErrorBoundary from "./error-boundry";
+import ErrorBoundary from "../../components/error-boundry/error-boundry";
 
 import '@testing-library/jest-dom/extend-expect';
 

@@ -5,9 +5,8 @@ import ErrorBoundary from "./components/error-boundry/error-boundry";
 import { BrowserRouter } from "react-router-dom";
 
 import { Provider } from "react-redux";
-
 import store from "./store";
-import rootReducer from "./store";
+
 
 ReactDOM.render(
   <Provider store={store}>
