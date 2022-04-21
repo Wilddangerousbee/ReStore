@@ -1,6 +1,8 @@
 import React, { FC, Fragment } from "react";
+import { useSelectionType } from "../../hooks/useSelectionTyped";
+import store from "../../store";
+import { Book } from "../../types/Book";
 
-import { Book } from "../../types/types";
 
 const BookListItem : FC<Book> = ({title, author}) => {
 

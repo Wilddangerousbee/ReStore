@@ -1,22 +1,32 @@
-import { BooksAction } from "../actions";
-
-import { Book } from "./../types/types"
- 
-interface BooksState {
-    books: Array<Book>
-};
+import { ActionBook, booksActionTypes, BooksState } from './../types/Book'
 
 const initialState : BooksState = {
-    books: []
+    books: [], 
+    loading: true,
+    error: null
 }
 
-const BooksReducer = (state = initialState, action: BooksAction) : BooksState => {
+const BooksReducer = (state = initialState, action: booksActionTypes) : BooksState => {
     switch (action.type) {
-        case 'BOOKS_LOADED':
+        case ActionBook.BOOKS_LOADING:
             return {
-                books: action.payload
+                books: [],
+                loading: true,
+                error: null
             };
-    
+        
+        case ActionBook.BOOKS_LOADED:
+            return {
+                books: action.payload,
+                loading: false,
+                error: null
+            };
+        case ActionBook.BOOKS_ERROR:
+            return {
+                books: [],
+                loading: false, 
+                error: action.payload    
+            }
         default:
             return state;
     }
@@ -24,4 +34,4 @@ const BooksReducer = (state = initialState, action: BooksAction) : BooksState =>
 
 export type {BooksState}
 
-export {BooksReducer, initialState}
+export {BooksReducer}
