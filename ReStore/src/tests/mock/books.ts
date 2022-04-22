@@ -4,23 +4,27 @@ const BooksListTest : booksActionTypes = {
     type: ActionBook.BOOKS_LOADED,
     payload: [{
         title: "Hideo",
-        author: "Kodzima"
+        author: "Kodzima",
+        imageLink: "a"
     }, {
         title: "Kujo",
-        author: "Jotore"
+        author: "Jotore",
+        imageLink: "a",
     }]
 }
 
 const BookListTest : Book = {
     title: "Don", 
-    author: "Servantes"
+    author: "Servantes",
+    imageLink: "a",
 }
 
 const ReducerTest : booksActionTypes = {
     type: ActionBook.BOOKS_LOADED,
     payload: [{
       title: "Harry Potter",
-      author: "J. Rouling"  
+      author: "J. Rouling",
+      imageLink: "a",  
     }]
 }
 

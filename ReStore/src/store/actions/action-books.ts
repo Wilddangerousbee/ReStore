@@ -10,7 +10,8 @@ const fetchBooks = () => {
         try {
             dispatch(booksLoading())
             const date = await serviceApi.getDate();
-            const books : Book[] = DateToBookArray(date.results);
+            console.log(date);
+            const books : Book[] = DateToBookArray(date.items);
             dispatch(booksLoaded(books));
         } catch(e) {
             dispatch(booksError("При загрузке данных произошла ошибка"))

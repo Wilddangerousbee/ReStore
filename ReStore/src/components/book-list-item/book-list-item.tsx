@@ -1,13 +1,14 @@
-import React, { FC, Fragment } from "react";
+import React, { FC } from "react";
 import { Book } from "../../types";
 
 
-const BookListItem : FC<Book> = ({title, author}) => {
+const BookListItem : FC<Book> = ({title, author, imageLink}) => {
 
     return (
         <li>
-            <span>{title}</span>
-            <span>{author}</span>
+            <img src={imageLink}/>
+            <p>{title}</p>
+            <p>{author}</p>
         </li>
     );
 }
