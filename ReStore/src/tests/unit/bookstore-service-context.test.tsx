@@ -1,4 +1,4 @@
-import { ServiceApi } from "../../components/service";
+import { ServiceApi } from "../../service";
 
 import axios from "axios";
 import { responsTest } from "../mock/axios";

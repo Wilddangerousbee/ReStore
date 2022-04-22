@@ -25,7 +25,7 @@ class ErrorBoundary extends React.Component<ErrorBoundaryProps, ErrorBoundarySta
 
     if (hasError) {
       return(
-        <h1 data-testid="error-message">{errorInfo}</h1>
+        <h1 data-testid="error-message">Произошла ошибка</h1>
       );
     }
 

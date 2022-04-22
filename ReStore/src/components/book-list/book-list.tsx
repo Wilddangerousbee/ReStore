@@ -6,9 +6,10 @@ import { useSelectionType } from "../../hooks/useSelectionTyped";
 
 import { BookListProps } from "../../types";
 import BookListItem from "../book-list-item";
+import Spinner from "../spinner";
 
 const BookList : FC<BookListProps> = () => {
-    const {books} = useSelectionType(state => state.books);
+    const {error, loading, books} = useSelectionType(state => state.books);
 
     const { fetchBooks } = useAction();
 
@@ -16,10 +17,18 @@ const BookList : FC<BookListProps> = () => {
         fetchBooks();
     }, [])
     
+    if (loading){
+        return <Spinner/>
+    }
+
+    if (error) {
+        return <h1>Ошибка загрузки данных</h1>
+    }
+
     return (
-        <div>
+        <ul>
             {books.map((book) => <BookListItem {...book} />)}
-        </div>
+        </ul>
     )
 }
 

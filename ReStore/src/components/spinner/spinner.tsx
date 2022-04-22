@@ -1,12 +1,10 @@
 import React, {FC} from "react";
-import { ISpinner } from "../../types";
 
 import ErrorBoundary from "../error-boundry";
 
 import "./spinner.css";
 
-const Spinner: FC<ISpinner>  = ({widht, hieght}) => {
-    console.log(widht, hieght)
+const Spinner: FC  = () => {
     return (
         <ErrorBoundary>
         <div className="lds-roller">

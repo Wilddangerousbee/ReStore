@@ -5,10 +5,10 @@ import { Book } from "../../types";
 const BookListItem : FC<Book> = ({title, author}) => {
 
     return (
-        <Fragment>
+        <li>
             <span>{title}</span>
             <span>{author}</span>
-        </Fragment>
+        </li>
     );
 }
 

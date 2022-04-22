@@ -1,8 +1,15 @@
-import { FC } from "react";
+import { FC, Fragment } from "react";
+import BookList from "../book-list";
+import ErrorBoundary from "../error-boundry";
 
 const HomePage:FC = () => {
     return (
-        <h1>Home Page</h1>
+        <Fragment>
+            <h1>Home Page</h1>
+            <ErrorBoundary>
+                <BookList />
+            </ErrorBoundary>
+        </Fragment>
     );
 }
 
