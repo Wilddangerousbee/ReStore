@@ -1,24 +1,14 @@
 import { createStore } from "redux";
 import { ActionBook, booksActionTypes } from "../../types";
+import { ReducerTest } from "../mock/books";
 import  BooksReducer from './../../store/reducers'
 
 describe("test BooksReducer", () => {
     test('BOOKS_LOADED', () => {  
         const store = createStore(BooksReducer);
-        const action : booksActionTypes = {
-            type: ActionBook.BOOKS_LOADED,
-            payload: [{
-              title: "Harry Potter",
-              author: "J. Rouling"  
-            }]
-        }
+        store.dispatch(ReducerTest);
 
-        store.dispatch(action);
-
-        expect(store.getState().books).toEqual([{
-            title: "Harry Potter",
-            author: "J. Rouling"  
-          }]);
+        expect(store.getState().books).toEqual(ReducerTest);
     })
 
     test('Initial store', () => {  
