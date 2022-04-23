@@ -30,7 +30,7 @@ const BookList : FC<BookListProps> = () => {
     }
 
     return (
-        <div className=".book-list d-flex align-content-sm-around flex-wrap">
+        <div className="book-list d-flex align-content-sm-around flex-wrap">
             {books.map((book) => <BookListItem {...book} />)}
         </div>
     )
