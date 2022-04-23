@@ -1,7 +1,7 @@
-import { SearchAction, SearchActions, SearchState } from "../../types/Search";
+import { SearchAction, SearchActions, SearchState } from "../../types";
 
 const initioaState : SearchState = {
-    searchString: "computer",
+    searchString: "react",
 }
 
 const SearchReducer = (state : SearchState = initioaState, action :  SearchAction) : SearchState => {

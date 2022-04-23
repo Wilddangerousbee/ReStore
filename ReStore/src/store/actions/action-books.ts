@@ -14,6 +14,7 @@ const fetchBooks = (searchString : string) => {
             const books : Book[] = DateToBookArray(date.items);
             dispatch(booksLoaded(books));
         } catch(e) {
+            console.log(e);
             dispatch(booksError("При загрузке данных произошла ошибка"))
         }
     }

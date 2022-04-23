@@ -10,6 +10,7 @@
     margin-top: 10px;
     margin-left: auto;
     margin-right: auto;
+    height: 180px;
 }
 
 .title, .author, .buy{
@@ -22,6 +23,10 @@
     display: -webkit-box; 
     -webkit-box-orient: vertical;
     overflow: hidden;
+}
+
+.title{
+    height: 54px;
 }
 
 .buy{

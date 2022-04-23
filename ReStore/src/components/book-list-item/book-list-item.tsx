@@ -22,7 +22,7 @@ const BookListItem : FC<Book> = ({title, author, imageLink}) => {
         >
                 <img className="image" src={imageLink}/>
                 <p className="title">{title}</p>
-                <p className="author">{author}</p>
+                {<p className="author">{author || "Без автора"}</p>}
                 <button className="buy btn btn-primary btn-md">Купить</button>
         </div>
     );
