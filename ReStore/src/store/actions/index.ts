@@ -1,4 +1,5 @@
-import { fetchBooks } from "./action-books";
-import { updateSearch } from "./action-search";
+import { fetchBooks } from "./books";
+import { updateSearch } from "./search";
+import { addBook, removeBook } from "./basket";
 
-export {fetchBooks, updateSearch}
+export {fetchBooks, updateSearch, addBook, removeBook}

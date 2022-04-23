@@ -1,9 +1,12 @@
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
+import { useSelectionType } from "../../hooks/useSelectionTyped";
 
 import "./basket.css"
 
 const Basket : FC = () => {
+    const { count } = useSelectionType(state => state.basket)
+
     return (
         <div className="basket">
             <Link target="_self" to={"/carts"} className="g3s k1c" data-widget="headerIcon">
@@ -15,7 +18,7 @@ const Basket : FC = () => {
                     </path>        
                 </svg>
                 <span className="tsCaptionBold ck2">
-                    1
+                    {count}
                 </span>
             </Link>
         </div>
