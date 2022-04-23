@@ -10,6 +10,7 @@
     margin-left: auto;
     margin-right: auto;
     height: 180px;
+    max-width: 160px;
 }
 
 .title, .author, .buy{
