@@ -82,3 +82,9 @@
       transform: rotate(360deg);
     }
   }
+
+.lds-roller{
+  position: absolute;
+  left: 48%;
+  top: 48%;
+}

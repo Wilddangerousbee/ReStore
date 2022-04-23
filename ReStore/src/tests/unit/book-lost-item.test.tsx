@@ -7,7 +7,7 @@ import { BookListTest } from "../mock/books";
 
 describe("test books list item", () => {
     test('add book', () => { 
-        render(<BookListItem {...BookListTest} />)
+        render(<BookListItem id={1} {...BookListTest} />)
 
         expect(screen.getByText(/don/i)).toBeInTheDocument();
         expect(screen.getByText(/servantes/i)).toBeInTheDocument();

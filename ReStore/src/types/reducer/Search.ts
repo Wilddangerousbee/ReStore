@@ -8,7 +8,8 @@ interface SearchAction {
 }
 
 interface SearchState {
-    searchString : string
+    searchString : string,
+    prevSearchString : string
 }
 
 const setNewSearch = (newSearch : string) : SearchAction => {

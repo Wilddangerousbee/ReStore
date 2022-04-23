@@ -1,26 +1,29 @@
-import React, { FC, useEffect, useState } from "react";
+import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from "react";
 
 import { connect } from "react-redux";
 import { useAction } from "../../hooks/useActions";
 import useDebounce from "../../hooks/useDebounce";
 import { useSelectionType } from "../../hooks/useSelectionTyped";
 
-import { BookListProps } from "../../types";
 import BookListItem from "../book-list-item";
 import Spinner from "../spinner";
 
 import "./index.css"
 
-const BookList : FC<BookListProps> = () => {
-    const {error, loading, books} = useSelectionType(state => state.books);
-    const {searchString} = useSelectionType(state => state.search);
+const BookList : FC = () => {
+    const { error, loading, books } = useSelectionType(state => state.books);
+    const { searchString, prevSearchString } = useSelectionType(state => state.search);
+    const { updateSearch } = useAction();
 
     const fetchBooks = useDebounce(useAction().fetchBooks, 1000);
 
-    useEffect(() => {
-        fetchBooks(searchString);
+    useMemo(() => {
+        if (prevSearchString !== searchString) {
+            fetchBooks(searchString);   
+        }
+        return updateSearch(searchString);
     }, [searchString])
-    
+
     if (loading){
         return <Spinner/>
     }
@@ -31,13 +34,9 @@ const BookList : FC<BookListProps> = () => {
 
     return (
         <div className="book-list d-flex align-content-sm-around flex-wrap">
-            {books.map((book) => <BookListItem {...book} />)}
+            {books.map((book, index) => <BookListItem id={index} {...book} />)}
         </div>
     )
 }
 
-const mapStateToProps = (books : BookListProps) => {
-    return books
-}
-
-export default connect(mapStateToProps)(BookList);
+export default BookList;

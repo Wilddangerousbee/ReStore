@@ -1,8 +1,7 @@
 .book-list-item{
     width: 200px;
-    margin-left: 10px;
-    margin-right: 10px;
     margin-top: 2%;
+    margin-left: 2%;
 }
 
 .image{
@@ -37,4 +36,8 @@
 .author{
     color: rgb(136, 130, 123);
     -webkit-line-clamp: 1;
+}
+
+.link-book{
+    text-decoration: none;
 }
