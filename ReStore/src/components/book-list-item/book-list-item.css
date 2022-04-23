@@ -1,0 +1,34 @@
+.book-list-item{
+    width: 200px;
+    margin-left: 2%;
+    margin-top: 2%;
+}
+
+.image{
+    display: block;
+    margin-top: 10px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.title, .author, .buy{
+    margin-left: auto;
+    margin-right: auto;
+    width: 6em;
+    max-width: 200px;
+    margin-top: 10px; 
+    -webkit-line-clamp: 2;
+    display: -webkit-box; 
+    -webkit-box-orient: vertical;
+    overflow: hidden;
+}
+
+.buy{
+    margin-bottom: 10px;
+}
+
+
+.author{
+    color: rgb(136, 130, 123);
+    -webkit-line-clamp: 1;
+}

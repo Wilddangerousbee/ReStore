@@ -1,4 +1,4 @@
-import React, { FC, useEffect } from "react";
+import React, { FC, useEffect, useState } from "react";
 
 import { connect } from "react-redux";
 import { useAction } from "../../hooks/useActions";
@@ -8,14 +8,17 @@ import { BookListProps } from "../../types";
 import BookListItem from "../book-list-item";
 import Spinner from "../spinner";
 
+import "./index.css"
+
 const BookList : FC<BookListProps> = () => {
     const {error, loading, books} = useSelectionType(state => state.books);
+    const {searchString} = useSelectionType(state => state.search);
 
     const { fetchBooks } = useAction();
 
     useEffect(() => {
-        fetchBooks();
-    }, [])
+        fetchBooks(searchString);
+    }, [searchString])
     
     if (loading){
         return <Spinner/>
@@ -26,9 +29,9 @@ const BookList : FC<BookListProps> = () => {
     }
 
     return (
-        <ul>
+        <div className=".book-list d-flex align-content-sm-around flex-wrap">
             {books.map((book) => <BookListItem {...book} />)}
-        </ul>
+        </div>
     )
 }
 

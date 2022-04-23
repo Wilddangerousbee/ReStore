@@ -12,7 +12,7 @@ describe("service api", () => {
 
         const booksServiceApi = new ServiceApi();
 
-        const date = await booksServiceApi.getDate(booksServiceApi._usrlSwapi);
+        const date = await booksServiceApi.getDate();
 
         expect(date).toEqual(responsTest);
     })

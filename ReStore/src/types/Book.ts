@@ -7,7 +7,7 @@ enum ActionBook {
 interface Book {
     title: string,
     author: string,
-    imageLink: string
+    imageLink: string,
 }
 
 interface BookListProps {
