@@ -1,0 +1,15 @@
+.my-basket{
+    display: block;
+    margin-left: 35%;
+}
+
+.delete-book{
+    margin-top: 20px;
+    margin-left: 0px;
+    margin-bottom: 20px;
+}
+
+.items{
+    margin-left: 10%;
+    margin-right: 10%;
+}

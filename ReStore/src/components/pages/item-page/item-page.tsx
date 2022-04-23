@@ -2,6 +2,7 @@ import React, { FC, Fragment } from "react";
 import { useParams } from "react-router-dom";
 import { useSelectionType } from "../../../hooks/useSelectionTyped";
 import BookListItem from "../../book-list-item";
+import ItemBooks from "../../item-book/item-book";
 
 import "./item-page.css"
 
@@ -11,23 +12,7 @@ const ItemPage : FC = () => {
 
     return (
         <Fragment>
-        <div className="root-block">
-            <img src={books[Number(id)].imageLink}/>
-            <ul className="list-group list-group-flush">
-                <li 
-                    className="list-group-item">
-                    {`Author: ${books[Number(id)].author}`}
-                </li> 
-                <li 
-                    className="list-group-item">
-                    {`Title: ${books[Number(id)].title}`}
-                </li>
-                <li 
-                    className="list-group-item">
-                    {`Сategories: ${books[Number(id)].categories}`}
-                </li>
-            </ul>
-        </div>
+        <ItemBooks {...books[Number(id)]}/>
         <div className="discription">
             <p >{books[Number(id)].description}</p>
         </div>
