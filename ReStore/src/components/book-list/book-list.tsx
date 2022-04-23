@@ -2,6 +2,7 @@ import React, { FC, useEffect, useState } from "react";
 
 import { connect } from "react-redux";
 import { useAction } from "../../hooks/useActions";
+import useDebounce from "../../hooks/useDebounce";
 import { useSelectionType } from "../../hooks/useSelectionTyped";
 
 import { BookListProps } from "../../types";
@@ -14,7 +15,7 @@ const BookList : FC<BookListProps> = () => {
     const {error, loading, books} = useSelectionType(state => state.books);
     const {searchString} = useSelectionType(state => state.search);
 
-    const { fetchBooks } = useAction();
+    const fetchBooks = useDebounce(useAction().fetchBooks, 1000);
 
     useEffect(() => {
         fetchBooks(searchString);
