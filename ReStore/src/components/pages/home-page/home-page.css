@@ -1,0 +1,11 @@
+.home-page{
+    display: block;
+    margin-left: 10%;
+    margin-right: 10%;
+}
+
+.home-page h1{
+    display: block;
+    margin-left: 46%;
+    justify-self: center;
+}

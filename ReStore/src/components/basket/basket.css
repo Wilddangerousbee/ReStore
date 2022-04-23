@@ -1,0 +1,55 @@
+.g3s {
+    transition: var(--transition);
+    transition-property: color;
+}
+
+.g3s {
+    transition: var(--transition);
+    transition-property: color;
+}
+
+.k1c {
+    height: 44px;
+    justify-content: center;
+    padding-top: 0;
+    width: 44px;
+}
+
+
+a, a:hover {
+    text-decoration: none;
+}
+
+a, abbr, acronym, address, applet, b, big, blockquote, body, center, cite, code, dd, del, dfn, div, dl, dt, em, fieldset, form, h1, h2, h3, h4, h5, h6, html, i, iframe, img, ins, kbd, label, legend, li, object, ol, p, pre, q, s, samp, small, span, strike, strong, sub, sup, tt, u, ul, var {
+    margin: 0;
+    padding: 0;
+}
+
+a:-webkit-any-link {
+    cursor: pointer;
+}
+
+.g8c {
+    box-sizing: border-box;
+    font-family: var(--title-font);
+    margin: 0 auto;
+    max-width: var(--desktop-screen-default);
+    min-height: 100px;
+    padding: 4px var(--desktop-padding-default);
+    width: 100%;
+}
+
+.k1c {
+    align-content: center;
+    align-items: center;
+    box-sizing: border-box;
+    color: #001a34;
+    flex-direction: column;
+    position: relative;
+}
+
+.basket{
+    display: block;
+    margin-left: 85%;
+    margin-top: 2%;
+}
