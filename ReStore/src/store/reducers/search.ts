@@ -1,7 +1,7 @@
 import { SearchAction, SearchActions, SearchState } from "../../types";
 
 const initioaState : SearchState = {
-    searchString: "",
+    searchString: "react",
     prevSearchString: ""
 }
 

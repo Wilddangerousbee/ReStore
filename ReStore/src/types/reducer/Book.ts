@@ -8,7 +8,8 @@ interface Book {
     title: string,
     author: string,
     imageLink: string,
-    key: string
+    categories: Array<string>,
+    description: string,
 }
 
 interface BookListProps {

@@ -6,12 +6,14 @@ const BooksListTest : booksActionTypes = {
         title: "Hideo",
         author: "Kodzima",
         imageLink: "a",
-        key: "a"
+        categories: ["a", "a"], 
+        description: "a",
     }, {
         title: "Kujo",
         author: "Jotore",
         imageLink: "a",
-        key: "a",
+        categories: ["a", "a"], 
+        description: "a",
     }]
 }
 
@@ -19,7 +21,8 @@ const BookListTest : Book = {
     title: "Don", 
     author: "Servantes",
     imageLink: "a",
-    key: "a",
+    categories: ["a", "a"], 
+    description: "a",
 }
 
 const ReducerTest : booksActionTypes = {
@@ -28,7 +31,8 @@ const ReducerTest : booksActionTypes = {
       title: "Harry Potter",
       author: "J. Rouling",
       imageLink: "a",
-      key: "a",  
+      categories: ["a", "a"], 
+      description: "a",
     }]
 }
 

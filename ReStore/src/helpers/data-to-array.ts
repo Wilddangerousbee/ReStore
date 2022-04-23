@@ -17,7 +17,8 @@ const DateToBookArray = (data : Array<any>) : Array<Book> => {
             title: el.volumeInfo.title, 
             author: el.volumeInfo.authors,
             imageLink: imageLink,
-            key: el.id 
+            categories: el.volumeInfo.categories,
+            description: el.volumeInfo.description
         }
     })
 }  

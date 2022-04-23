@@ -1,6 +1,5 @@
-import React, { FC, useCallback, useEffect, useMemo, useRef, useState } from "react";
+import React, { FC, useMemo } from "react";
 
-import { connect } from "react-redux";
 import { useAction } from "../../hooks/useActions";
 import useDebounce from "../../hooks/useDebounce";
 import { useSelectionType } from "../../hooks/useSelectionTyped";
