@@ -14,8 +14,14 @@ const ItemPage : FC = () => {
         <div className="root-block">
             <img src={books[Number(id)].imageLink}/>
             <ul className="list-group list-group-flush">
-                <li className="list-group-item">{books[Number(id)].author}</li> 
-                <li className="list-group-item">{books[Number(id)].title}</li>
+                <li 
+                    className="list-group-item">
+                    {`Author: ${books[Number(id)].author}`}
+                </li> 
+                <li 
+                    className="list-group-item">
+                    {`Title: ${books[Number(id)].title}`}
+                </li>
                 <li 
                     className="list-group-item">
                     {`Сategories: ${books[Number(id)].categories}`}
