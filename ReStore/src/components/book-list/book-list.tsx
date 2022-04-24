@@ -2,6 +2,7 @@ import React, { FC, useMemo } from "react";
 
 import { useAction } from "../../hooks/useActions";
 import useDebounce from "../../hooks/useDebounce";
+import useSearch from "../../hooks/useSearch";
 import { useSelectionType } from "../../hooks/useSelectionTyped";
 
 import BookListItem from "../book-list-item";
@@ -11,17 +12,7 @@ import "./index.css"
 
 const BookList : FC = () => {
     const { error, loading, books } = useSelectionType(state => state.books);
-    const { searchString, prevSearchString } = useSelectionType(state => state.search);
-    const { updateSearch } = useAction();
-
-    const fetchBooks = useDebounce(useAction().fetchBooks, 1000);
-
-    useMemo(() => {
-        if (prevSearchString !== searchString) {
-            fetchBooks(searchString);   
-        }
-        return updateSearch(searchString);
-    }, [searchString])
+    useSearch()
 
     if (loading){
         return <Spinner/>

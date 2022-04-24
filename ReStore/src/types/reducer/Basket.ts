@@ -20,6 +20,10 @@ const ActionsBasketRemove = (book: Book) => {
     }
 }
 
+interface IBookListItem extends Book {
+    id: number,
+} 
+
 interface actionsBasketAdd  {
     type: ActionsBasket.ADD_BOOK,
     payload: Book,
@@ -39,5 +43,5 @@ interface Basket {
     books: Array<Book>,
 }
 
-export type { ActionsBasketTypes, Basket }
+export type { ActionsBasketTypes, Basket, IBookListItem }
 export { ActionsBasketAdd, ActionsBasketRemove, ActionsBasket }

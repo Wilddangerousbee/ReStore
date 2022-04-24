@@ -1,33 +1,21 @@
 import React, { FC, useState } from "react";
 import { Link } from "react-router-dom";
+import { addShadow, returnUsualClass } from "../../helpers/work-with-shadow";
 import { useAction } from "../../hooks/useActions";
-import { Book } from "../../types";
-
+import { IBookListItem } from "../../types/reducer/Basket";
 
 import "./book-list-item.css"
-interface IBookListItem extends Book {
-    id: number,
-} 
+
 
 const BookListItem : FC<IBookListItem> = (book) => {
     const {id, title, author, imageLink} = book;
     const [className, setClassName] = useState("book-list-item");
     const { addBook } = useAction();
 
-
-
-    const addShadow = () => {
-        setClassName("book-list-item shadow-lg bg-white rounded");
-    }
-
-    const returnUsualClass = () => {
-        setClassName("book-list-item")
-    }
-
     return (
         <div 
-                onMouseOver={addShadow} 
-                onMouseOut = {returnUsualClass}
+                onMouseOver={() => addShadow(setClassName)} 
+                onMouseOut = {() => returnUsualClass(setClassName)}
                 className={className}
             >
         <Link className="link-book" to={`book/${id}`}>
