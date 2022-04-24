@@ -15,11 +15,16 @@ const BasketReducer = (store = initialBasket, action : ActionsBasketTypes) : Bas
                 books: store.books.concat(action.payload),
             }
         case ActionsBasket.REMOVE_BOOK:
+            let removeFlg = false;
             return {
                 count: store.count - 1,
                 total: store.total - 150,
                 books: store.books.filter((el) => {
-                    return action.payload.title !== el.title
+                    if (action.payload.title === el.title && !removeFlg) {
+                        removeFlg = true;
+                        return false;
+                    }
+                    return true;
                 }),
             }
     
