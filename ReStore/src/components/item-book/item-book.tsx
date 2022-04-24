@@ -1,5 +1,6 @@
 import { FC } from "react"
 import { Book } from "../../types"
+import "./item-book.css"
 
 const ItemBooks : FC<Book> = (book) => {
     return (

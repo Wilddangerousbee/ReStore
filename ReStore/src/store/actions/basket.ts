@@ -1,6 +1,6 @@
 import { Dispatch } from "react";
-import { ActionBook, Basket, Book } from "../../types";
-import { ActionsBasket, ActionsBasketTypes } from "../../types/reducer/Basket";
+import { Book } from "../../types";
+import { ActionsBasket, ActionsBasketTypes } from "../../types";
 
 const addBook = (book : Book) => {
     return (dispatch : Dispatch<ActionsBasketTypes>) => {

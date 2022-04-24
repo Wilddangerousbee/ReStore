@@ -1,8 +1,7 @@
 import React, { FC, Fragment } from "react";
 import { useParams } from "react-router-dom";
-import { useSelectionType } from "../../../hooks/useSelectionTyped";
-import BookListItem from "../../book-list-item";
-import ItemBooks from "../../item-book/item-book";
+import { useSelectionType } from "../../../hooks";
+import ItemBooks from "../../item-book";
 
 import "./item-page.css"
 

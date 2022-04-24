@@ -7,4 +7,4 @@ const useAction = () => {
     return bindActionCreators(Actions, dispatch);
 }
 
-export { useAction } 
+export default useAction 

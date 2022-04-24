@@ -1,7 +1,7 @@
 import React, { FC, Fragment } from "react";
-import { useAction } from "../../../hooks/useActions";
-import { useSelectionType } from "../../../hooks/useSelectionTyped";
-import ItemBooks from "../../item-book/item-book";
+import { useAction } from "../../../hooks";
+import { useSelectionType } from "../../../hooks";
+import ItemBooks from "../../item-book";
 
 import "./cart-page.css"
 

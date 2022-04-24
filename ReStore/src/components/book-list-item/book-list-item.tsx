@@ -1,8 +1,8 @@
 import React, { FC, useState } from "react";
 import { Link } from "react-router-dom";
-import { addShadow, returnUsualClass } from "../../helpers/work-with-shadow";
-import { useAction } from "../../hooks/useActions";
-import { IBookListItem } from "../../types/reducer/Basket";
+import { addShadow, returnUsualClass } from "../../helpers";
+import { useAction } from "../../hooks";
+import { IBookListItem } from "../../types";
 
 import "./book-list-item.css"
 

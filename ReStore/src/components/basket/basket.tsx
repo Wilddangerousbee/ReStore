@@ -1,6 +1,6 @@
 import React, { FC } from "react";
 import { Link } from "react-router-dom";
-import { useSelectionType } from "../../hooks/useSelectionTyped";
+import { useSelectionType } from "../../hooks";
 
 import "./basket.css"
 

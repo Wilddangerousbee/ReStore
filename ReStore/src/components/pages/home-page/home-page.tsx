@@ -1,7 +1,7 @@
 import { FC } from "react";
 import BookList from "../../book-list";
 import ErrorBoundary from "../../error-boundry";
-import SearchPanel from "../../search-panel/search-panel";
+import SearchPanel from "../../search-panel";
 
 import "./home-page.css"
 

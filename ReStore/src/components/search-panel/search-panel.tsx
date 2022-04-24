@@ -1,7 +1,7 @@
 import React, { ChangeEvent, useDebugValue, useEffect, useMemo, useState } from "react";
 import { FC } from "react";
-import { useAction } from "../../hooks/useActions";
-import { useSelectionType } from "../../hooks/useSelectionTyped";
+import { useAction } from "../../hooks";
+import { useSelectionType } from "../../hooks";
 
 const SearchPanel : FC = () => {
     const { updateSearch } = useAction();

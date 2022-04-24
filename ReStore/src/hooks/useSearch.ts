@@ -1,7 +1,7 @@
 import { useMemo } from "react";
-import { useAction } from "./useActions";
+import useAction from "./useActions";
 import useDebounce from "./useDebounce";
-import { useSelectionType } from "./useSelectionTyped";
+import useSelectionType from "./useSelectionTyped";
 
 const useSearch = () => {
     const { searchString, prevSearchString } = useSelectionType(state => state.search);

@@ -1,4 +1,4 @@
-import { ActionsBasket, ActionsBasketTypes, Basket } from "../../types/reducer/Basket"
+import { ActionsBasket, ActionsBasketTypes, Basket } from "../../types"
 
 const initialBasket : Basket = {
     count: 0,
